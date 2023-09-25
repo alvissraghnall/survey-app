@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import { AuthContext } from "./contexts";
 import { User } from "./hooks";
-import {  } from "react-router-dom";
 
 function App() {
   const [user, setUser] = useState<User | null>(null);

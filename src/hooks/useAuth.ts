@@ -3,12 +3,13 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import { AuthContext } from "../contexts";
 import { useLocalStorage } from "./useLocalStorage";
 import { type User, useUser } from ".";
+import { app as firebaseApp } from "../utils/firebase";
 
 export const useAuth = () => {
   const { user, addUser, removeUser } = useUser();
   const { getItem, setItem, removeItem } = useLocalStorage();
 
-  const auth = getAuth();
+  const auth = getAuth(firebaseApp);
 
   // Listen to Firebase authentication state changes
   useEffect(() => {

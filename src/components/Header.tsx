@@ -1,5 +1,4 @@
 
-import React from 'react'
 import { useAuth } from '../hooks'
 import { Link } from 'react-router-dom';
 import { RouteNames } from '../utils';
@@ -24,7 +23,7 @@ const Header = () => {
     </p>
     
     return (
-        <div className='flex flex-row justify-between h-20 mt-6 items-center w-full px-6'>
+        <div className='flex flex-row justify-between h-20 mt-4 items-center w-full px-6'>
             <div className="items-ceter flex-row flex justify-between">
                 {
                     user && <Link className='bg-green-700 text-secondary rounded-lg active:focus:hover:brightness-90  capitalize' to={RouteNames.CREATE}>
@@ -39,7 +38,7 @@ const Header = () => {
             </div>
             <div className="flex justify-between items-center flex-row">
                 {
-                    user && UserInfo
+                    UserInfo
                 }
             </div>
 

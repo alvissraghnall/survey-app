@@ -1,9 +1,9 @@
 
 export enum RouteNames {
     ROOT = "/",
-    LOGIN = "/login",
+    LOGIN = "/signin",
     CREATE = "/create",
-    REGISTER = "/register",
+    REGISTER = "/signup",
     SURVEY = "/survey",
     SURVEYS = "/surveys",
 }
